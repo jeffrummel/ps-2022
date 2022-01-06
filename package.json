@@ -1,0 +1,38 @@
+{
+  "name": "11ty-starter",
+  "version": "1.0.1",
+  "description": "Starter Site for Eleventy Projects",
+  "main": "gulpfile.js",
+  "repository": "git@github.com:jeffrummel/11ty-starter.git",
+  "author": "Jeff Rummel <jeff@jeffrummel.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "gen": "gulp generate",
+    "start": "gulp build & gulp watch & gulp serve",
+    "build": "gulp build",
+    "build:local": "gulp build:local",
+    "serve": "gulp watch & gulp serve"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "0.12.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-serve": "^1.4.0",
+    "gulp-shell": "^0.6.5",
+    "gulp-uglify-es": "^1.0.4",
+    "precss": "^4.0.0",
+    "pug": "^3.0.1",
+    "pump": "^3.0.0",
+    "require-dir": "^1.2.0"
+  },
+  "devDependencies": {
+    "gulp": "4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^5.0.0",
+    "node-sass": "^7.0.1",
+    "postcss-csso": "^3.0.0",
+    "postcss-pixels-to-rem": "^0.8.0",
+    "sass-rem": "^2.0.1"
+  }
+}
