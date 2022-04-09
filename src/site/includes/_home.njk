@@ -13,6 +13,24 @@
     </figure> #}
   </header>
   </main>
+  {% if kickers.kickers %}
+  <section class="cards">
+  {% for kicker in kickers.kickers %}
+    <div class="cards__card">
+      <h3 class="cards__card--hed">{{ kicker.hed }}</h3>
+      <p class="cards__card--dek">{{ kicker.dek }}</p>
+      {% if kicker.links %}
+      <footer class="cards__card--foot">
+      {% for link in kicker.links %}
+        <a class="cards__card--cta" href="{{ link.url }}">{{link.cta}}</a>
+      {% endfor %}
+      </footer>
+      {% endif %}
+    </div>
+
+  {% endfor %}
+  </section>
+  {% endif %}
   <footer class="cov__foot foot">
     <h2 class="foot__credit">&copy; {{ site.buildTime | copyDate }} Jeff Rummel</h2>
     <nav class="foot__nav"><a class="foot__nav--link" href="//github.com/jeffrummel">{% include 'icons/github.svg' %} <span class="foot__nav--text">GitHub</span></a><a class="foot__nav--link" href="//twitter.com/jeffrummel">{% include 'icons/twitter.svg' %}<span class="foot__nav--text">Twitter</span></a></nav>

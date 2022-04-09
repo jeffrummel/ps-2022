@@ -1,0 +1,52 @@
+.cards {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  &__card {
+    flex: 0 0 33.3vw;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 3vw;
+    background-color: #EA2D4A;
+    &:first-of-type {
+      background-color: #15A9EB;
+    }
+    &:last-of-type {
+      background-color: #15EBB8;
+    }
+    &--hed {
+      @extend %siteH3;
+    }
+    &--dek {
+      height: 0;
+      overflow: hidden;
+      @extend %siteP;
+    }
+    &--foot {
+      padding: 0;
+      height: 0;
+      overflow: hidden;
+       width: 100%;
+    }
+    &--cta {
+      margin-top: 20vh;
+      margin-bottom: 6vh;
+      clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%);
+      animation: actionSwitch .3s cubic-bezier(0.215, 0.610, 0.355, 1) .3s forwards 1;
+      &:nth-last-child(1) {
+        animation: actionSwitch .3s cubic-bezier(0.215, 0.610, 0.355, 1) .4s forwards 1;
+      }
+      @extend %ctaPrimary;
+      &:link,
+      &:visited {
+        color:white;
+      }
+    }
+  }
+}
