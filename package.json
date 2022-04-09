@@ -10,7 +10,7 @@
   "scripts": {
     "gen": "gulp generate",
     "start": "gulp build & gulp watch & gulp serve",
-    "build": "gulp build",
+    "build": "gulp build:production",
     "build:local": "gulp build:local",
     "serve": "gulp watch & gulp serve"
   },
