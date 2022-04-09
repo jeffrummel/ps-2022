@@ -1,0 +1,62 @@
+$fontHed:  'Arthura-BlackItalic', sans-serif;
+$fontBody: "Arthura-Light", sans-serif;
+%siteH1 {
+  font-family: $fontHed;
+  // font-weight: 700;
+  // font-style: italic;
+  line-height: 1;
+  // text-indent: -1vw;
+  // letter-spacing: -0.09vw;
+  &::first-line {
+  }
+  @media screen and (max-aspect-ratio: 8/6) {
+    font-size: 14.5vw;
+  }
+  @media screen and (min-aspect-ratio: 8/6) {
+    font-size: 10.695vw;
+  }
+}
+%siteH2 {
+  font-family: $fontHed;
+  // font-style: italic;
+  // font-weight: 700;
+  line-height: 1;
+  &::first-line {
+  }
+  @media screen and (max-aspect-ratio: 8/6) {
+    font-size: 32px;
+  }
+  @media screen and (min-aspect-ratio: 8/6) {
+    font-size: 2.1vw;
+  }
+}
+%siteH5 {
+  font-family: $fontBody;
+  font-weight: 700;
+  line-height: .97;
+  &::first-line {
+  }
+  @media screen and (max-aspect-ratio: 8/6) {
+    font-size: 2vh;
+  }
+  @media screen and (min-aspect-ratio: 8/6) {
+    font-size: 3vh;
+  }
+}
+%sitePFeature {
+  font-family: $fontBody;
+  // font-weight: 700;
+  line-height: 1.4;
+  &::first-line {
+  }
+  @media screen and (max-aspect-ratio: 8/6) {
+    font-size: 2vh;
+  }
+  @media screen and (min-aspect-ratio: 8/6) {
+    font-size: 22px;
+  }
+}
+%subScript {
+  font-family: $fontBody;
+  font-size: .6em;
+}

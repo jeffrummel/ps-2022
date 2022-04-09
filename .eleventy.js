@@ -1,3 +1,5 @@
+const { DateTime } = require("luxon");
+
 module.exports = function(config) {  
   
   // Markdown
@@ -7,6 +9,9 @@ module.exports = function(config) {
     breaks: true,
     linkify: true
   };
+  config.addFilter('copyDate', dateObj => {
+    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy');
+  });
   config.setLibrary("md", markdownIt(options));
   config.setDynamicPermalinks(false);
   config.addPassthroughCopy("favicon.ico");
@@ -16,7 +21,8 @@ module.exports = function(config) {
     dir: {
       input: "src/site",
       output: "public",
-      includes: "includes"
+      includes: "includes",
+      data: "data"
     },
     passthroughFileCopy: true,
     templateFormats: ['njk', 'md'],

@@ -21,6 +21,7 @@
     "gulp-serve": "^1.4.0",
     "gulp-shell": "^0.6.5",
     "gulp-uglify-es": "^1.0.4",
+    "luxon": "^2.3.0",
     "precss": "^4.0.0",
     "pug": "^3.0.1",
     "pump": "^3.0.0",
@@ -30,7 +31,7 @@
     "gulp": "4.0.2",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^5.0.0",
-    "node-sass": "^7.0.1",
+    "node-sass": "^6.0.0",
     "postcss-csso": "^3.0.0",
     "postcss-pixels-to-rem": "^0.8.0",
     "sass-rem": "^2.0.1"

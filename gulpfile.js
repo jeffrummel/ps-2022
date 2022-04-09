@@ -15,7 +15,7 @@ gulp.task('assets', gulp.parallel(
 
 //  Build
 // 
-gulp.task('build:local', gulp.series(
+gulp.task('build', gulp.series(
   'clean',
   'assets',
   'generate'

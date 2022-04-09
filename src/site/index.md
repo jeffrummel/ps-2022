@@ -1,9 +1,7 @@
 ---
-layout: _layout.njk
-title: 11ty Starter
-subHed: Starter Site for Eleventy Projects
+layout: _home.njk
+title: Hello
+subHed: Welcome to the website of Jeff Rummel.
 ---
 
-## Welcome to Eleventy
-
-This is a boilerplate for kicking off a new [Eleventy](https://www.11ty.io/) Project. Read the [docs](https://www.11ty.io/docs/)
+Let's build something that elevates your mission and <br>loads quickly for all types of website users.

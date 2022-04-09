@@ -1,0 +1,22 @@
+{% extends "partials/_wrapper.njk" %}
+{% block main %}
+
+<body class="home">
+  <nav></nav>
+  <main class="marq">
+  <header class="marq__hed">
+    <h1 class="marq--title">{{ title }}</h1>
+    <h2 class="marq--sub">{{ subHed }}</h2>
+    <div class="marq--dek">{{ content | safe }}</div>
+    {# <figure class="marq__grfx">
+      <img class="marq__grfx--img" src="/img/DSC_0112.jpg" alt="Our hero, out of focus.">
+    </figure> #}
+  </header>
+  </main>
+  <footer class="cov__foot foot">
+    <h2 class="foot__credit">&copy; {{ site.buildTime | copyDate }} Jeff Rummel</h2>
+    <nav class="foot__nav"><a class="foot__nav--link" href="//github.com/jeffrummel">{% include 'icons/github.svg' %} <span class="foot__nav--text">GitHub</span></a><a class="foot__nav--link" href="//twitter.com/jeffrummel">{% include 'icons/twitter.svg' %}<span class="foot__nav--text">Twitter</span></a></nav>
+  </footer>
+  <script src="/js/main.js" async></script>
+</body>
+{% endblock %}

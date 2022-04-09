@@ -1,6 +1,62 @@
 @import "helpers/reset";
 @import "helpers/base";
+@import "helpers/type";
+@import "helpers/animation";
 
+footer {
+  grid-column: 1 / span 2;
+  grid-row: 3;
+}
+body {
+  // > * {
+  //   outline: 1px dashed yellow;
+  //   > * {
+  //     outline: 2px dotted yellowgreen;
+  //   }
+  // }
+  footer {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    @extend %subScript;
+    @media screen and (max-aspect-ratio: 8/6) {
+      grid-column: 1 / span 2;
+      padding: 0 3vw;
+    }
+    @media screen and (min-aspect-ratio: 8/6) {
+      grid-column: 2 / span 1;
+      padding: 0 3vw .5em;
+    }
+    nav {
+      flex:0 0 auto;
+      display: flex;
+      flex-flow: row nowrap;
+    }
+    a {
+      box-sizing: border-box;
+      width:30px;
+      height:30px;
+      border-radius:50%;
+      display: block;
+      padding:2px;
+      margin-left:12px;
+    }
+    svg {
+      /* fill:#003e66; */
+    }
+    span {
+      position: absolute;
+      height: 1px; width: 1px; 
+      overflow: hidden;
+      clip: rect(1px 1px 1px 1px); 
+      clip: rect(1px, 1px, 1px, 1px);  
+    }
+  }
+}
+h1 {
+  @extend %siteH1;
+}
 
-/* @import "modules/[*].css";
-@import "blocks/[*].css"; */
+@import "modules/marquee";
+// @import "blocks/[*].css"; 

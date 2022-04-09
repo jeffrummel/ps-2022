@@ -1,25 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
-    <meta name="author" content="jeffrummel">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1">
-    <meta name="mobile-web-app-capable" content="no">
-    <meta name="apple-mobile-web-app-capable" content="no">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
-  </head>
-  <body class="long">
-    <header class="long__hed">
-      <h1 class="long__hed--title">{{ title }}</h1>
-      <h2 class="long__hed--sub">{{ subHed }}</h2>
-    </header>
-    <article class="long__body">{{ body }}</article>
-    <script src="/js/main.js" async></script>
-  </body>
-</html>
+{% extends "partials/_wrapper.njk" %}
+{% block main %}
+
+<body class="long">
+  <header class="long__hed">
+    <h1 class="long__hed--title">{{ title }}</h1>
+    <h2 class="long__hed--sub">{{ subHed }}</h2>
+  </header>
+  <article class="long__body">{{ content | safe }}</article>
+  <script src="/js/main.js" async></script>
+</body>
+{% endblock %}
