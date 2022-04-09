@@ -1,0 +1,34 @@
+%cta {
+  position: relative;
+  display: inline-flex;
+  align-items:flex-start;
+  height: 58px;
+  text-decoration: none;
+  @extend %ctaTxt;
+  &:after {
+    position: absolute;
+    bottom:0;
+    content:'';
+    display: block;
+    animation: borderSet .8s forwards 0s 1 running;
+    animation-fill-mode: forwards;
+  }
+  &:hover:after {
+    // animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: borderSlide .8s forwards 1 running;
+    animation-fill-mode: forwards;
+  }
+}
+
+%ctaPrimary {
+  @extend %cta;
+  &:after {
+    border-bottom:5px solid white;
+  }
+}
+%ctaSecondary {
+  @extend %cta;
+  &:after {
+    border-bottom:5px solid white;
+  }
+}

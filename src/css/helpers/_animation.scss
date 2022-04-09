@@ -1,11 +1,57 @@
+@keyframes actionSwitch {
+  0% {
+    // introduce action link
+    clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%);
+  }
+  100% {
+    // margin-top: 2vh;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+  }
+}
+@keyframes borderSet {
+  // action link over
+  0% {
+    width:0%;
+    left:0;
+  } 40% {
+    width:57%;
+    left:0;
+  } 100% {
+    width:57%;
+    left:0;
+  }
+}
+@keyframes borderSlide {
+  // action link over
+  0% {
+    width:57%;
+    left:0;
+  } 40% {
+    width:0%;
+    left:0;
+  } 50% {
+    width:0%;
+  } 60% {
+    width:0%;
+    right:0;
+  } 70% {
+    width:0%;
+  } 100% {
+    width:57%;
+    right:0;
+  }
+}
 @keyframes marq {
   0% {
     background-color: rgba(#000, 1);
+    background-size: 120% auto;
+    background-position: center;
   } 100% {
     background-color: rgba(#3D2A24, .8);
+    // background-size: 120% auto;
+    // background-position: left center;
   }
 }
-
 @keyframes hed {
   0% {
     clip-path: circle(0 at 0 25%);
