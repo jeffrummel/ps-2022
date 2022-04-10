@@ -4,7 +4,6 @@
   align-items:flex-start;
   height: 58px;
   text-decoration: none;
-  @extend %ctaTxt;
   &:after {
     position: absolute;
     bottom:0;
@@ -22,12 +21,14 @@
 
 %ctaPrimary {
   @extend %cta;
-  &:after {
-    border-bottom:5px solid white;
-  }
+  @extend %siteH5;
+  // &:after {
+  //   border-bottom:5px solid white;
+  // }
 }
 %ctaSecondary {
   @extend %cta;
+  @extend %siteH6;
   &:after {
     border-bottom:5px solid white;
   }

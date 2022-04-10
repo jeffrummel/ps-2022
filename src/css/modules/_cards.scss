@@ -1,48 +1,68 @@
 .cards {
   display: flex;
   flex-flow: row wrap;
-  align-items: center;
+  align-items: stretch;
+  align-content: center;
   justify-content: center;
   color: white;
   &__card {
-    flex: 0 0 33.3vw;
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
     justify-content: center;
-    height: 100vh;
     box-sizing: border-box;
-    padding: 3vw;
+    padding: 3.5vw;
     background-color: #EA2D4A;
+    @media screen and (max-aspect-ratio: 8/6) {
+      min-height: 33.3vh;
+      flex:  0 0 100vw;
+    }
+    @media screen and (min-aspect-ratio: 8/6) {
+      min-height: 100vh;
+      flex: 0 0 33.3vw;
+    }  
     &:first-of-type {
       background-color: #15A9EB;
     }
     &:last-of-type {
       background-color: #15EBB8;
     }
+    &:hover &--hed {     
+      // animation: cardMargin 1.15s cubic-bezier(.66,.55,.73,1.61) 0s 1 forwards;  
+    }
     &--hed {
       @extend %siteH3;
+      margin-bottom: 1vw;
     }
-    &--dek {
+    &:hover &--body {
+      animation: card .815s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s 1 forwards;  
+    }
+    &--body {
       height: 0;
       overflow: hidden;
+      animation: cardOff 1.15s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s 1 forwards; 
+    }
+    &--dek {
       @extend %siteP;
     }
     &--foot {
       padding: 0;
-      height: 0;
-      overflow: hidden;
-       width: 100%;
+      justify-content: flex-start;
+      width: 100%;
     }
     &--cta {
-      margin-top: 20vh;
+      margin-top: 7vh;
       margin-bottom: 6vh;
+      margin-right: 1.2vw;
+      flex: 0 0 auto;
       clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%);
-      animation: actionSwitch .3s cubic-bezier(0.215, 0.610, 0.355, 1) .3s forwards 1;
-      &:nth-last-child(1) {
-        animation: actionSwitch .3s cubic-bezier(0.215, 0.610, 0.355, 1) .4s forwards 1;
+      .cards__card:hover & {
+        animation: actionSwitch .3s cubic-bezier(0.215, 0.610, 0.355, 1) .3s forwards 1;
+        &:nth-last-child(1) {
+          animation: actionSwitch .3s cubic-bezier(0.215, 0.610, 0.355, 1) .4s forwards 1;
+        }
       }
-      @extend %ctaPrimary;
+      @extend %ctaSecondary;
       &:link,
       &:visited {
         color:white;

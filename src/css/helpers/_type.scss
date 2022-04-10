@@ -44,9 +44,8 @@ $fontBody: "Arthura-Light", sans-serif;
     font-size: 48px;
   }
 }
-%siteH5 {
-  font-family: $fontBody;
-  font-weight: 700;
+%siteH4 {
+  font-family: $fontHed;
   line-height: .97;
   &::first-line {
   }
@@ -55,6 +54,22 @@ $fontBody: "Arthura-Light", sans-serif;
   }
   @media screen and (min-aspect-ratio: 8/6) {
     font-size: 3vh;
+  }
+}
+%siteH5 {
+  font-family: $fontHed;
+  line-height:1.41;
+  font-size:18px;
+  @media screen and (min-width:740px) {
+    font-size: 1.8vw;
+  }
+}
+%siteH6 {
+  font-family: $fontHed;
+  line-height:1.41;
+  font-size:18px;
+  @media screen and (min-width:740px) {
+    font-size: 1.2vw;
   }
 }
 %siteP {
