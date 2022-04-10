@@ -17,14 +17,21 @@
   color: #fff;
   &__hed {
     clip-path: circle(0 at 0 25%);
-    // background-color: pink;
-    animation: hed 1.2s cubic-bezier(.86,.01,.74,.71) 0s 1 forwards;  
-  }
-  > * {
+    animation: hed 1.2s cubic-bezier(.86,.01,.74,.71) 0s 1 forwards;
     box-sizing: border-box;
     width: 100%;
     max-width: 750px;
-    padding-right: 110px;
+    @media screen and (max-aspect-ratio: 8/6) {
+      padding: 3.5vw;
+      br {
+        display: none;
+      }
+    }
+    @media screen and (min-aspect-ratio: 8/6) {
+      padding-right: 110px;
+    }
+  }
+  > * {
   }
   &--title {
     opacity: 0;
