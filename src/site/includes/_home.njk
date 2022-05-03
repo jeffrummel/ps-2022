@@ -16,6 +16,9 @@
   {% if kickers.kickers %}
   {% include './partials/_kickers.njk' %}
   {% endif %}
+
+  {% include './partials/_form.njk' %}
+
   <footer class="cov__foot foot">
     <h2 class="foot__credit">&copy; {{ site.buildTime | copyDate }} Jeff Rummel</h2>
     <nav class="foot__nav"><a class="foot__nav--link" href="//github.com/jeffrummel">{% include 'icons/github.svg' %} <span class="foot__nav--text">GitHub</span></a><a class="foot__nav--link" href="//twitter.com/jeffrummel">{% include 'icons/twitter.svg' %}<span class="foot__nav--text">Twitter</span></a></nav>

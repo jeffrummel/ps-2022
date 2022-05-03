@@ -15,6 +15,7 @@
   background-blend-mode: multiply;
   animation: marq 8.3s cubic-bezier(0.075, 0.82, 0.165, 1) 0s 1 forwards;
   color: #fff;
+  scroll-snap-align: start;
   &__hed {
     clip-path: circle(0 at 0 25%);
     animation: hed 1.2s cubic-bezier(.86,.01,.74,.71) 0s 1 forwards;

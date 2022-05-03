@@ -5,6 +5,10 @@
   align-content: center;
   justify-content: center;
   color: white;
+  scroll-snap-align: start;
+  @media screen and (min-aspect-ratio: 8/6) {
+    margin-bottom: -80vh;
+  }
   &__card {
     display: flex;
     flex-flow: column nowrap;
@@ -12,20 +16,24 @@
     justify-content: center;
     box-sizing: border-box;
     padding: 3.5vw;
-    background-color: #EA2D4A;
+    background: linear-gradient(to bottom, #D41E94 100vh, rgba(#D41E94, 0) 180vh);
     @media screen and (max-aspect-ratio: 8/6) {
       min-height: 33.3vh;
       flex:  0 0 100vw;
     }
     @media screen and (min-aspect-ratio: 8/6) {
+      box-sizing: content-box;
       min-height: 100vh;
-      flex: 0 0 33.3vw;
+      flex: 0 0 26.3vw;
+      padding-bottom: 80vh;
     }  
     &:first-of-type {
-      background-color: #15A9EB;
+      background: linear-gradient(to bottom, #EA2D4A 100vh, rgba(#EA2D4A, 0) 180vh);
+      // box-shadow: 0 20vh 60vh 6vw #EA2D4A;
     }
     &:last-of-type {
-      background-color: #15EBB8;
+      background: linear-gradient(to bottom, #15A9EB 100vh, rgba(#15A9EB, 0) 180vh);
+      // box-shadow: 0 20vh 60vh 6vw #15A9EB;
     }
     &:hover &--hed {     
       // animation: cardMargin 1.15s cubic-bezier(.66,.55,.73,1.61) 0s 1 forwards;  

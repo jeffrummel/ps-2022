@@ -1,0 +1,30 @@
+{
+  "forms": [
+    {
+      "slug": "get-started",
+      "Submit Text": "Let's Go!",
+      "hed": "Get Started",
+      "form": [
+        {
+          "type": "name"
+        }
+      ]    
+    },
+    {
+      "slug": "support",
+      "Submit Text": "Submit",
+      "hed": "Support",
+      "form": [
+        {
+          "type": "name"
+        },
+        {
+          "type": "email"
+        },
+        {
+          "type": "website"
+        }
+      ]
+    }
+  ]
+}

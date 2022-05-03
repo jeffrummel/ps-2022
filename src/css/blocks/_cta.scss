@@ -22,9 +22,9 @@
 %ctaPrimary {
   @extend %cta;
   @extend %siteH5;
-  // &:after {
-  //   border-bottom:5px solid white;
-  // }
+  &:after {
+    border-bottom:5px solid #EA2D4A;
+  }
 }
 %ctaSecondary {
   @extend %cta;

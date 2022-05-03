@@ -75,14 +75,14 @@ $fontBody: "Arthura-Light", sans-serif;
 %siteP {
   font-family: $fontBody;
   font-size: 16px;
-  line-height: 1.4;
+  line-height: 1.6;
   &::first-line {
   }
 }
 %sitePFeature {
   font-family: $fontBody;
   // font-weight: 700;
-  line-height: 1.4;
+  line-height: 1.5;
   &::first-line {
   }
   @media screen and (max-aspect-ratio: 8/6) {
