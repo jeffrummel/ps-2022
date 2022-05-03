@@ -1,11 +1,11 @@
 {% extends "partials/_wrapper.njk" %}
 {% block main %}
 
-<body class="home">
+<body id="index" class="home">
   <nav></nav>
   <main class="marq">
   <header class="marq__hed">
-    <h1 class="marq--title">{{ title }}</h1>
+    <h1 class="marq__hed--title">{{ title }}</h1>
     <h2 class="marq--sub">{{ subHed }}</h2>
     <div class="marq--dek">{{ content | safe }}</div>
     {# <figure class="marq__grfx">

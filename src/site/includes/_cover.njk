@@ -1,17 +1,23 @@
 {% extends "partials/_wrapper.njk" %}
 {% block main %}
 
-<body class="cover">
-  <header class="cov__hed">
-    <h1 class="cov__hed--title">{{ title }}</h1>
+<body id="{{ title | slug }}" class="dest">
+  <nav></nav>
+  <main class="marq" style="background-image: url(/img/rapid-response-websites.webp);">
+  <header class="marq__hed">
+    <h1 class="marq__hed--sub">{{ title }}</h1>
+    <h2 class="marq--sub">{{ subHed }}</h2>
+    <div class="marq--dek">{{ content | safe }}</div>
+    {# <figure class="marq__grfx">
+      <img class="marq__grfx--img" src="/img/DSC_0112.jpg" alt="Our hero, out of focus.">
+    </figure> #}
   </header>
-  <nav class="cov__toc toc"></nav>
-  <figure class="cov">
-    <img class="cov__grfx" src="/img/DSC_0112.jpg" alt="Our hero, out of focus.">
-    <figcaption class="cov__dek">
-      <article class="cov__dek--body">{{ content | safe }}</article>
-    </figcaption>
-  </figure>
+  </main>
+  {% if kickers.kickers %}
+  {% include './partials/_kickers.njk' %}
+  {% endif %}
+
+  {% include './partials/_form.njk' %}
 
   <footer class="cov__foot foot">
     <h2 class="foot__credit">&copy; {{ site.buildTime | copyDate }} Jeff Rummel</h2>

@@ -7,8 +7,6 @@
   align-content: space-around;
   align-items: center;
   justify-content: flex-end;
-  background-color: rgba(#000, 1);
-  background-image: url(/img/DSC_0112.jpg);
   background-position: center;
   background-attachment: fixed;
   background-size: 120% auto;
@@ -16,12 +14,20 @@
   animation: marq 8.3s cubic-bezier(0.075, 0.82, 0.165, 1) 0s 1 forwards;
   color: #fff;
   scroll-snap-align: start;
+  #index & {
+    background-image: url(/img/DSC_0112.jpg);
+    background-color: rgba(#3D2A24, 1);
+  }
+  #rapid-response-websites & {
+    background-image: url(/img/rapid-response-websites.webp);
+    background-color: rgba(#3D2A24, 1);
+  }
   &__hed {
     clip-path: circle(0 at 0 25%);
     animation: hed 1.2s cubic-bezier(.86,.01,.74,.71) 0s 1 forwards;
     box-sizing: border-box;
     width: 100%;
-    max-width: 750px;
+    max-width: 970px;
     @media screen and (max-aspect-ratio: 8/6) {
       padding: 3.5vw;
       br {
@@ -31,21 +37,26 @@
     @media screen and (min-aspect-ratio: 8/6) {
       padding-right: 110px;
     }
+    &--title {
+      opacity: 0;
+      @extend %siteH1;
+      animation: title 3.3s cubic-bezier(0.075, 0.82, 0.165, 1) 0s 1 forwards;
+    }
+    &--sub {
+      opacity: 0;
+      @extend %siteH2;
+      animation: title 3.3s cubic-bezier(0.075, 0.82, 0.165, 1) 0s 1 forwards;
+    }
   }
   > * {
   }
-  &--title {
-    opacity: 0;
-    @extend %siteH1;
-    // animation: name duration timing-function delay iteration-count direction fill-mode;
-    animation: title 3.3s cubic-bezier(0.075, 0.82, 0.165, 1) 0s 1 forwards;
-  }
   &--sub {
     opacity: 0;
-    @extend %siteH2;
+    @extend %siteH3;
     animation: sub 3.3s cubic-bezier(0.075, 0.82, 0.165, 1) .3s 1 forwards;
   }
   &--dek {
+    min-height: 41.7vh;
     opacity: 0;
     @extend %sitePFeature;
     animation: dek 3.3s cubic-bezier(0.075, 0.82, 0.165, 1) .3s 1 forwards;

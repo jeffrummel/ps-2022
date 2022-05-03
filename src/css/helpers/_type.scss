@@ -18,8 +18,18 @@ $fontBody: "Arthura-Light", sans-serif;
 }
 %siteH2 {
   font-family: $fontHed;
-  // font-style: italic;
-  // font-weight: 700;
+  line-height: 1;
+  &::first-line {
+  }
+  @media screen and (max-aspect-ratio: 8/6) {
+    font-size: 32px;
+  }
+  @media screen and (min-aspect-ratio: 8/6) {
+    font-size: 5vw;
+  }
+}
+%siteH3 {
+  font-family: $fontHed;
   line-height: 1;
   &::first-line {
   }
@@ -30,10 +40,8 @@ $fontBody: "Arthura-Light", sans-serif;
     font-size: 2.1vw;
   }
 }
-%siteH3 {
+%siteH4 {
   font-family: $fontHed;
-  // font-style: italic;
-  // font-weight: 700;
   line-height: 1;
   &::first-line {
   }
@@ -42,18 +50,6 @@ $fontBody: "Arthura-Light", sans-serif;
   }
   @media screen and (min-aspect-ratio: 8/6) {
     font-size: 48px;
-  }
-}
-%siteH4 {
-  font-family: $fontHed;
-  line-height: .97;
-  &::first-line {
-  }
-  @media screen and (max-aspect-ratio: 8/6) {
-    font-size: 2vh;
-  }
-  @media screen and (min-aspect-ratio: 8/6) {
-    font-size: 3vh;
   }
 }
 %siteH5 {
