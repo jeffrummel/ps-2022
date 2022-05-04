@@ -2,11 +2,15 @@
 {% for supp in supp.supps %}
 {% if suppId == supp.rel %}
 <div class="supp">
-  <figure class="supp__grfx">{{ supp.grfx }}</figure>
+  {# {% image "supp__grfx", supp.grfx, supp.hed, "50vw", "supp__grfx--media lazy" %} #}
+
+  <figure class="supp__grfx">
+    <img class="supp__grfx--img" src="{{ supp.grfx }}">
+  </figure>
   <aside  class="supp__post">
     <h2 class="supp__post--hed">{{ supp.hed }}</h2>
     <div class="supp__post--body">
-      {{ supp.body | safe }}
+      {{ supp.dek | mdRender | safe }}
     </div>
   </aside>
 </div>

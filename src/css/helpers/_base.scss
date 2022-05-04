@@ -1,0 +1,69 @@
+strong,
+b {
+  font-weight:800;
+}
+h1 {
+  @extend %siteH2;
+}
+h2 {
+  @extend %siteH3;
+}
+h3 {
+  @extend %siteH3;
+
+}
+h4 {
+  @extend %siteH4;
+}
+h5 {
+  @extend %siteH5;
+
+}
+h6 {
+  @extend %siteH6;
+}
+p {
+  margin:18px 0;
+  @extend %siteP;
+  & strong,
+  & b {
+    font-weight:800;
+  }
+  & i,
+  & em {
+    font-style:italic;
+  }
+  & small {
+    @extend %sitePSmall;
+  }
+}
+blockquote {
+  padding:12px 24px;
+  margin:24px 0;
+  & p {
+    @extend %sitePFeature;
+  }
+}
+ol {
+  margin:24px 0;
+  list-style: decimal;
+}
+ul {
+  margin:24px 0;
+  list-style: disc;
+}
+li {
+  margin:0 0 6px 18px;
+  @extend %siteP;
+}
+hr {
+  display: block;
+  border:0;
+  width:100%;
+  height:1px;
+  background: gray;
+}
+pre {
+  font-family: 'Courier New', Courier, monospace;
+  line-height:1.1;
+}

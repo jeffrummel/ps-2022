@@ -1,7 +1,7 @@
 {% extends "partials/_wrapper.njk" %}
 {% block main %}
 
-<body id="{{ title | slug }}" class="dest">
+<body id="{{ title | slug }}" class="cover">
   <nav></nav>
   <main class="marq" style="background-image: url(/img/rapid-response-websites.webp);">
   <header class="marq__hed">
@@ -16,6 +16,13 @@
   {% if supplemental %}
     {% include './partials/_supp.njk'%}
   {% endif%}
+
+  {% if kickers.kickers %}
+    {% include './partials/_kickers.njk' %}
+  {% endif %}
+
+  {% include './partials/_features.njk' %}
+
 
   {% include './partials/_form.njk' %}
 

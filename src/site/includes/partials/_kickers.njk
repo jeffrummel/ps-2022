@@ -1,18 +1,9 @@
-  <section id="start-here" class="cards">
+  <section class="kickers">
   {% for kicker in kickers.kickers %}
-    <div class="cards__card">
-      <h3 class="cards__card--hed">{{ kicker.hed }}</h3>
-      <div class="cards__card--body">
-        <p class="cards__card--dek">{{ kicker.dek }}</p>
-        {% if kicker.links %}
-        <footer class="cards__card--foot">
-        {% for link in kicker.links %}
-          <a class="cards__card--cta" href="{{ link.url }}">{{link.cta}}</a>
-        {% endfor %}
-        </footer>
-      </div>
-      {% endif %}
+    <div class="kickers__item">
+      <figure class="kickers__item--grfx"></figure>
+      <h3 class="kickers__item--hed">{{ kicker.hed }}</h3>
+      <p class="kickers__item--dek">{{ kicker.dek }}</p>
     </div>
-
   {% endfor %}
   </section>

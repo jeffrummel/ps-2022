@@ -1,0 +1,18 @@
+  <section id="start-here" class="cards">
+  {% for card in cards.cards %}
+    <div class="cards__card">
+      <h3 class="cards__card--hed">{{ card.hed }}</h3>
+      <div class="cards__card--body">
+        <p class="cards__card--dek">{{ card.dek }}</p>
+        {% if card.links %}
+        <footer class="cards__card--foot">
+        {% for link in card.links %}
+          <a class="cards__card--cta" href="{{ link.url }}">{{link.cta}}</a>
+        {% endfor %}
+        </footer>
+      </div>
+      {% endif %}
+    </div>
+
+  {% endfor %}
+  </section>

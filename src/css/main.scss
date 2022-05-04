@@ -1,5 +1,4 @@
 @import "helpers/reset";
-@import "helpers/base";
 @import "helpers/type";
 @import "helpers/animation";
 
@@ -8,12 +7,15 @@ footer {
   grid-row: 3;
 }
 html {
-  scroll-snap-type: y mandatory;
+  // scroll-snap-type: y mandatory;
 }
 body {
   color: #3D2A24;
   &.home {
     background-color: #3D2A24;
+  }
+  &.cover {
+    background-color: #F5FAFF;
   }
   // > * {
   //   outline: 1px dashed yellow;
@@ -67,5 +69,8 @@ h1 {
 
 @import "modules/marquee";
 @import "modules/cards";
+@import "modules/data";
+@import "modules/kickers";
 @import "modules/action";
+@import "modules/supplemental";
 @import "blocks/cta"; 

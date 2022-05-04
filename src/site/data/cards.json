@@ -1,0 +1,38 @@
+{ "cards": [
+  {
+    "hed": "I need a website…fast. Like tomorrow",
+    "dek": "Great! I’ve built and overseen production on custom websites of all sizes. From complex data migrations and redesigns to fresh websites for new organizations or candidates, I'm happy to help your team find a solution that can grow with your goals.",
+    "links": [{
+      "cta": "Learn More",
+      "url": "/rapid-response-websites"
+    },
+    {
+      "cta": "Get Started",
+      "url": "#contact" 
+    }]
+  },
+  {
+    "hed": "I need a custom long-term solution.",
+    "dek": "Great! I’ve built and overseen production on custom websites of all sizes. From complex data migrations and redesigns to fresh websites for new organizations or candidates, I'm happy to help your team find a solution that can grow with your goals.",
+    "links": [{
+      "cta": "See Solutions",
+      "url": "#"
+    },
+    {
+      "cta": "Get Started",
+      "url": "#contact" 
+    }]
+  },
+  {
+    "hed": "I’d like to learn a little bit more about you.",
+    "dek": "Yeesh! I’m not one to talk about myself, but here goes… Jeff Rummel is a web designer/developer with experience in all levels and stages of web production. He lives in the small city of Lancaster, PA with his wife and child.",
+    "links": [{
+      "cta": "Read Resume",
+      "url": "#"
+    },
+    {
+      "cta": "Ask A Question",
+      "url": "#contact" 
+    }]
+  }
+]}

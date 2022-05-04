@@ -1,13 +1,35 @@
 .supp {
+  position: relative;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
-  grid-template: ;
+  scroll-snap-align: start;
+  min-height: 100vh;
+  max-width: 1300px;
+  padding: 0 3.5vw;
   &__post {
-    &--hed {}
-    &--body {}
+    flex: 0 0 40vw;
+    padding:  9.5vw 0;
+    &--hed {
+      @extend %siteH4;
+      max-width: 780px;
+    }
+    &--body {
+      @import "helpers/base";
+    }
   }
   &__grfx {
+    flex: 0 0 40vw;
+    height: 81vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: -13.5vh;
+    // padding: 0 0 9.5vw;
+    overflow: hidden;
+    position: sticky;
+    top: 3.5vw;
     &--media {}
   }
 }
