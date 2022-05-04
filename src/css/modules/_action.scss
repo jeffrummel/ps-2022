@@ -4,8 +4,8 @@
   max-width: 1080px;
   background-color: white;
   padding: 3.5vh 3.5vw;
-  border: 2px solid #8A7E7B;
-  border-radius: 1px;
+  border: 1px solid #8A7E7B;
+  border-radius: 3px;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -48,7 +48,7 @@
         display: block;
         width: 100%;
         padding: 9px;
-        border-radius: 1px;
+        border-radius: 3px;
         border: 1px solid #15A9EB;
         @extend %siteP;
       }
@@ -63,7 +63,7 @@
         width: 100%;
         min-height: 18vh;
         padding: 9px;
-        border-radius: 1px;
+        border-radius: 3px;
         border: 1px solid #15A9EB;
         @extend %siteP;
       }

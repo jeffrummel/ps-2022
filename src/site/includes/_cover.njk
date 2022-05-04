@@ -13,9 +13,9 @@
     </figure> #}
   </header>
   </main>
-  {% if kickers.kickers %}
-  {% include './partials/_kickers.njk' %}
-  {% endif %}
+  {% if supplemental %}
+    {% include './partials/_supp.njk'%}
+  {% endif%}
 
   {% include './partials/_form.njk' %}
 

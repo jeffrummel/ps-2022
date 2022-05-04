@@ -1,0 +1,13 @@
+.supp {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  grid-template: ;
+  &__post {
+    &--hed {}
+    &--body {}
+  }
+  &__grfx {
+    &--media {}
+  }
+}

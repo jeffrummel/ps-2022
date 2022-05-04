@@ -1,0 +1,15 @@
+{% set suppId = title | slug %}
+{% for supp in supp.supps %}
+{% if suppId == supp.rel %}
+<div class="supp">
+  <figure class="supp__grfx">{{ supp.grfx }}</figure>
+  <aside  class="supp__post">
+    <h2 class="supp__post--hed">{{ supp.hed }}</h2>
+    <div class="supp__post--body">
+      {{ supp.body | safe }}
+    </div>
+  </aside>
+</div>
+{% endif %}
+
+{% endfor %}
