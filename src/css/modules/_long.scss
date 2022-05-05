@@ -1,0 +1,72 @@
+.long {
+  &__body {
+    max-width: 1080px;
+    margin: 3.5vh auto;
+    @import "helpers/base";
+    &--copy {
+      max-width: 750px;
+      margin: 5.5vh 0 3.5vh;
+    }
+  }
+}
+// TODO - Move to Nexus block
+
+.nex {
+  padding:31px 0;
+  &__hed {
+    grid-column: 5 / span 6;
+    @extend %siteH3;
+  }
+  &__list {
+    & li {
+      list-style: none;
+      margin: 0;
+      @extend %siteP;
+    }
+  }
+  p {
+    max-width:657px;
+    @extend %siteP;
+    margin:11px 0 21px;
+    strong {
+      font-family:"Arthura-Black";
+    }
+    em,
+    i {
+      font-family:"Arthura-LightItalic";
+      strong,
+      b {
+        font-family:"Arthura-BoldItalic";
+      }
+    }
+  }
+  strong,
+  b {
+    font-family:"Arthura-Bold";
+    em,
+    i {
+      font-family:"Arthura-BoldItalic";
+    }
+  }
+@media screen and (min-width:1000px) {
+    display: grid;
+    grid-gap: 12px 22px;
+    justify-content: center;
+    grid-template-columns: repeat(12, 1fr );
+    grid-gap: 12px 42px;
+    &__hed {
+      grid-column: 7 / span 6;
+    }
+    &__grfx {
+      grid-column: 1 / span 6;
+      grid-row:1/span 2;
+      width: 100%;
+    }
+    &__list {
+      grid-column: 7 / span 6;
+      &--item {
+        // padding:8px 0 0;
+      }
+    }
+  }
+}

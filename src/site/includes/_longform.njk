@@ -1,0 +1,35 @@
+{% extends "partials/_wrapper.njk" %}
+{% block main %}
+
+<body id="{{ title | slug }}" class="longform">
+  <nav></nav>
+  <main class="long">
+  <header class="long__hed" style="background-image: url(/img/rapid-response-websites.webp);">
+    <h1 class="long__hed--sub">{{ title }}</h1>
+    <h2 class="long--sub">{{ subHed }}</h2>
+  </header>
+    <article class="long__body">
+      {{ content | safe }}
+    </article>
+
+  </main>
+  {% if supplemental %}
+    {% include './partials/_supp.njk'%}
+  {% endif%}
+
+  {% if kickers.kickers %}
+    {% include './partials/_kickers.njk' %}
+  {% endif %}
+
+  {% include './partials/_features.njk' %}
+
+
+  {% include './partials/_form.njk' %}
+
+  <footer class="cov__foot foot">
+    <h2 class="foot__credit">&copy; {{ site.buildTime | copyDate }} Jeff Rummel</h2>
+    <nav class="foot__nav"><a class="foot__nav--link" href="//github.com/jeffrummel">{% include 'icons/github.svg' %} <span class="foot__nav--text">GitHub</span></a><a class="foot__nav--link" href="//twitter.com/jeffrummel">{% include 'icons/twitter.svg' %}<span class="foot__nav--text">Twitter</span></a></nav>
+  </footer>
+  <script src="/js/main.js" async></script>
+</body>
+{% endblock %}

@@ -52,7 +52,7 @@
   }
   &--sub {
     opacity: 0;
-    @extend %siteH3;
+    @extend %siteH5;
     animation: sub 3.3s cubic-bezier(0.075, 0.82, 0.165, 1) .3s 1 forwards;
   }
   &--dek {

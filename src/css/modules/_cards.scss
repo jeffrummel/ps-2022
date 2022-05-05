@@ -39,7 +39,7 @@
       // animation: cardMargin 1.15s cubic-bezier(.66,.55,.73,1.61) 0s 1 forwards;  
     }
     &--hed {
-      @extend %siteH4;
+      @extend %siteH3;
       margin-bottom: 1vw;
     }
     &:hover &--body {

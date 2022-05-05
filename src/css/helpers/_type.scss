@@ -37,7 +37,7 @@ $fontBody: "Arthura-Light", sans-serif;
     font-size: 32px;
   }
   @media screen and (min-aspect-ratio: 8/6) {
-    font-size: 2.1vw;
+    font-size: 3.5vw;
   }
 }
 %siteH4 {
@@ -49,7 +49,7 @@ $fontBody: "Arthura-Light", sans-serif;
     font-size: 32px;
   }
   @media screen and (min-aspect-ratio: 8/6) {
-    font-size: 48px;
+    font-size: 36px;
   }
 }
 %siteH5 {
@@ -57,7 +57,7 @@ $fontBody: "Arthura-Light", sans-serif;
   line-height:1.41;
   font-size:18px;
   @media screen and (min-width:740px) {
-    font-size: 36px;
+    font-size: 24px;
   }
 }
 %siteH6 {
