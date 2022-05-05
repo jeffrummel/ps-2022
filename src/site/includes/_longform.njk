@@ -1,12 +1,14 @@
 {% extends "partials/_wrapper.njk" %}
 {% block main %}
 
-<body id="{{ title | slug }}" class="longform">
-  <nav></nav>
+<body id="{{ title | slug }}" class="longform dest">
+  {% include './partials/_header.njk' %}
   <main class="long">
   <header class="long__hed" style="background-image: url(/img/rapid-response-websites.webp);">
-    <h1 class="long__hed--sub">{{ title }}</h1>
-    <h2 class="long--sub">{{ subHed }}</h2>
+    <h1 class="long__hed--title">{{ title }}</h1>
+    {% if subHed %}
+    <h2 class="long__hed--sub">{{ subHed }}</h2>
+    {% endif %}
   </header>
     <article class="long__body">
       {{ content | safe }}

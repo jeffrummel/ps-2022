@@ -1,8 +1,9 @@
 {% extends "partials/_wrapper.njk" %}
 {% block main %}
 
-<body id="index" class="home">
-  <nav></nav>
+<body id="index" class="home dest">
+  {% include './partials/_header.njk' %}
+
   <main class="marq">
   <header class="marq__hed">
     <h1 class="marq__hed--title">{{ title }}</h1>

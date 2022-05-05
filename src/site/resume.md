@@ -1,7 +1,6 @@
 ---
 layout: _longform.njk
 title: Resume
-subHed: Welcome to the website of Jeff Rummel.
 ---
 
 <aside class="long__body--led">

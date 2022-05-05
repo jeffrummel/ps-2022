@@ -1,12 +1,16 @@
 {% extends "partials/_wrapper.njk" %}
 {% block main %}
 
-<body class="long">
+<body class="longform dest">
+  {% include './partials/_header.njk' %}
+
+<section class="long">
   <header class="long__hed">
     <h1 class="long__hed--title">{{ title }}</h1>
     <h2 class="long__hed--sub">{{ subHed }}</h2>
   </header>
   <article class="long__body">{{ content | safe }}</article>
+</section>
   <script src="/js/main.js" async></script>
 </body>
 {% endblock %}

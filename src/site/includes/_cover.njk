@@ -1,8 +1,8 @@
 {% extends "partials/_wrapper.njk" %}
 {% block main %}
 
-<body id="{{ title | slug }}" class="cover">
-  <nav></nav>
+<body id="{{ title | slug }}" class="cover dest">
+  {% include './partials/_header.njk' %}
   <main class="marq" style="background-image: url(/img/rapid-response-websites.webp);">
   <header class="marq__hed">
     <h1 class="marq__hed--sub">{{ title }}</h1>
