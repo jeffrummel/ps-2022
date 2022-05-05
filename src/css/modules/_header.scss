@@ -53,7 +53,7 @@
     &--logo {
       flex:0 0 100%;
       .visible-nav & {
-        fill: pink;
+        fill: #D41E94;
         @media screen and (min-width: 767px) {
           fill: white;
         }
@@ -76,7 +76,7 @@
         margin-top: 8px;
       }
       .visible-nav & {
-        fill: pink;
+        fill: #D41E94;
       }
     }
   }
