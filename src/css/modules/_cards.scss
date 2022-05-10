@@ -35,13 +35,15 @@
       background: linear-gradient(to bottom, #15A9EB 100vh, rgba(#15A9EB, 0) 180vh);
       // box-shadow: 0 20vh 60vh 6vw #15A9EB;
     }
+    &:active &--hed,     
     &:hover &--hed {     
-      // animation: cardMargin 1.15s cubic-bezier(.66,.55,.73,1.61) 0s 1 forwards;  
+        // animation: cardMargin 1.15s cubic-bezier(.66,.55,.73,1.61) 0s 1 forwards;  
     }
     &--hed {
       @extend %siteH3;
       margin-bottom: 1vw;
     }
+    &:active &--body,     
     &:hover &--body {
       animation: card .815s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s 1 forwards;  
     }
