@@ -5,6 +5,7 @@
   flex-flow: column;
   align-items: flex-end;
   justify-content: space-evenly;
+  scroll-snap-align: start;
   &__item {
     max-width: 860px;
     height: 206px;

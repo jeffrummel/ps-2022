@@ -6,4 +6,4 @@ subHed: Welcome to the website of Jeff Rummel.
 
 Let's build something that elevates your mission and <br>loads quickly for all types of website users.
 
-<a class="marq--cta" href="#start-here">Where do we start?</a>
+<a class="marq--cta inbound" href="#start-here">Where do we start?</a>

@@ -1,6 +1,6 @@
 var project = require('./_project.js')
 var gulp    = require('gulp')
-var sass    = require('gulp-sass')(require('node-sass'));
+var sass    = require('gulp-sass')(require('sass'));
 var postcss = require('gulp-postcss');
 
 //  Plugins
@@ -11,7 +11,7 @@ var pixelstorem = require('postcss-pixels-to-rem');
 gulp.task('styles', function() {
   return gulp.src(project.src + '/css/*.scss')
     .pipe(sass({
-      outputStyle: 'uncompressed'
+      outputStyle: 'compressed'
     }).on('error', sass.logError))
     .pipe(gulp.dest(project.dest + '/css/'))
 })

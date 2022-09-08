@@ -1,15 +1,16 @@
 ---
 layout: _longform.njk
 title: Resume
+supplemental: false
 ---
 
 <aside class="long__body--led">
   <p> <strong>Jeff Rummel, 2022. </strong>Passionate about building secure, performant websites that make the web and the world a better place. Ready to apply front-end, infrastructure and management skills developed while building sites for organizations like  <a href="https://metoomvmt.org/" rel="noreferrer prefetch" target="_blank">MeToo Movement </a>, <a href="https://revolutionmessaging.com/cases/bernie-2016/" rel="noreferrer prefetch" target="_blank">Bernie Sanders</a>, <a href="https://oceanconservancy.org" rel="noreferrer prefetch" target="_blank">Ocean Conservancy</a>, the  <a href="https://teamster.org" rel="noreferrer prefetch" target="_blank">Teamsters</a> and Jess King for Congress. Let's create something that makes the internet a more equitable place.</p>
 </aside>
 
-### Work Experience
 <article class="long__body--copy" id="experience">
 
+### Work Experience
 #### Rising Campaigns (2020 - March 2022)
 ##### Tech Lead Designer/Developer
 

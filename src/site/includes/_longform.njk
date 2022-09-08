@@ -12,21 +12,25 @@
   </header>
     <article class="long__body">
       {{ content | safe }}
+
     </article>
 
   </main>
-  {% if supplemental %}
+  {% if supplemental === true %}
     {% include './partials/_supp.njk'%}
   {% endif%}
 
-  {% if kickers.kickers %}
+  {% if kickers.kickers.page === title | slug %}
     {% include './partials/_kickers.njk' %}
   {% endif %}
 
-  {% include './partials/_features.njk' %}
+  {% if 'rapid-response-websites' === title | slug %}
+    {% include './partials/_features.njk' %}
+  {% endif %}
 
-
-  {% include './partials/_form.njk' %}
+  {% if 'resume' != title | slug %}
+    {% include './partials/_form.njk' %}
+  {% endif %}
 
   <footer class="cov__foot foot">
     <h2 class="foot__credit">&copy; {{ site.buildTime | copyDate }} Jeff Rummel</h2>

@@ -7,7 +7,8 @@
         {% if card.links %}
         <footer class="cards__card--foot">
         {% for link in card.links %}
-          <a class="cards__card--cta" href="{{ link.url }}">{{link.cta}}</a>
+          {% set regExpLink = r/^#.*/g %}
+          <a class="cards__card--cta switchoff {{ 'inbound' if regExpLink.test( link.url) }}" href="{{ link.url }}">{{link.cta}}</a>
         {% endfor %}
         </footer>
       </div>

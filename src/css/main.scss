@@ -6,9 +6,6 @@ footer {
   grid-column: 1 / span 2;
   grid-row: 3;
 }
-html {
-  scroll-snap-type: y mandatory;
-}
 body {
   color: #3D2A24;
   &.home {

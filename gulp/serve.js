@@ -1,8 +1,8 @@
 var project = require('./_project.js')
 var gulp    = require('gulp')
-var serve   = require('gulp-serve')
+var serve   = require('gulp-live-server')
 
-gulp.task('serve', serve({
-  root: [project.dest],
-  port: 8008
-}))
+gulp.task('serve', function() {
+  var server = serve.static(project.dest, 8008);
+  server.start();
+})
