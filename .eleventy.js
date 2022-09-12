@@ -2,17 +2,12 @@ const Image        = require("@11ty/eleventy-img");
 const { DateTime } = require("luxon");
 
 async function imageShortcode( classes, src, alt, sizes = '100vw', elClass) {
-  // if(alt === undifined) {
-  //   throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`)
-  // }
   let metadata = await Image(src.includes('http') ? src : `./src/_cms${src}`, {
 
-  // let metadata = await Image(src, {
     widths: [600, 1280, 2880],
-    formats: ['webp', 'jpeg'],
-    // outputDir: './dist/img/uploads',
-    // urlPath: '/img/uploads/',
-    // formats: ['webp', 'gif']
+    formats: ['webp', 'jpg'],
+    outputDir: './img',
+    urlPath: './img/',
     sharpOptions: {
       animated: true
     },  
@@ -26,12 +21,11 @@ async function imageShortcode( classes, src, alt, sizes = '100vw', elClass) {
   })
   let lowsrc  = metadata.jpeg[0]
   let highsrc = metadata.jpeg[metadata.jpeg.length - 1]
-  // let elClass = "derp"
 
 
   return `<picture class="${classes}">
     ${Object.values(metadata).map(imageFormat => {
-      return `  <source class="lazy" type="${imageFormat[0].sourceType}" srcset="${imageFormat.map(entry => entry.srcset).join(", ")}" sizes="${sizes}">`;
+      return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat.map(entry => entry.srcset).join(", ")}" sizes="${sizes}">`;
     }).join("\n")}
       <img
         src="${lowsrc.url}"
@@ -42,6 +36,7 @@ async function imageShortcode( classes, src, alt, sizes = '100vw', elClass) {
     </picture>`;
 
 }
+
 
 
 module.exports = function(config) {  

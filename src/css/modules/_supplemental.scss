@@ -21,6 +21,7 @@
   &__grfx {
     flex: 0 0 40vw;
     height: 81vh;
+    // height: 100%;
     box-sizing: border-box;
     display: flex;
     align-items: flex-start;
@@ -30,6 +31,10 @@
     overflow: hidden;
     position: sticky;
     top: 3.5vw;
+    &--img {
+      width: 100%;
+      height: auto;
+    }
     &--media {}
   }
 }
