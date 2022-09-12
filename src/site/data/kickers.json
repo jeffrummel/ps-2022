@@ -2,16 +2,19 @@
   {
     "page": "rapid-response-websites",
     "hed": "Built for performance on all devices and internet speeds",
+    "grfx": "performance",
     "dek": " WCAG 2 compliant, Lighthouse score, image processing, design options and other marketing stuff. Total 16-ish words."
   },
   {
     "page": "rapid-response-websites",
     "hed": "Modular Design System Headline",
+    "grfx": "modulardesign",
     "dek": " WCAG 2 compliant, Lighthouse score, image processing, design options and other marketing stuff. Total 16-ish words."
   },
   {
     "page": "rapid-response-websites",
     "hed": "Integrations you need Headline",
+    "grfx": "integrations",
     "dek": " WCAG 2 compliant, Lighthouse score, image processing, design options and other marketing stuff. Total 16-ish words."
   }
 ]}

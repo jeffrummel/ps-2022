@@ -13,11 +13,16 @@
     </figure> #}
   </header>
   </main>
+  {# {% if supp.supps.rel === page.fileName %} #}
+    {# {% include './partials/_supp.njk'%} #}
+  {# {% endif%} #}
   {% if supplemental %}
+    {% set suppId = page.fileName %}
+
     {% include './partials/_supp.njk'%}
   {% endif%}
 
-  {% if kickers.kickers %}
+  {% if kickers.kickers.page === page.fileName %}
     {% include './partials/_kickers.njk' %}
   {% endif %}
 

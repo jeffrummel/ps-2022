@@ -8,23 +8,23 @@
   scroll-snap-align: start;
   &__item {
     max-width: 860px;
-    height: 206px;
+    min-height: 285px;
     margin: 9.5vh 0;
     display: grid;
-    grid-template: 1fr auto / minmax(128px,310px) auto;
-    gap: 0 3.5vw;
+    grid-template: 1fr 1fr / minmax(128px,310px) auto;
+    gap: .75rem 3.5vw;
     // display: flex;
     // flex-wrap: wrap;
     // align-items: flex-start;
     &:nth-child(even) {
       align-self: flex-start;
-      grid-template: 1fr auto / auto minmax(128px,310px);
+      grid-template: 1fr 1fr / auto minmax(128px,310px);
     }
     &--hed {
       grid-column: 2;
       grid-row: 1;
       align-self: end;
-      @extend %siteH5;
+      @extend %siteH4;
     }
     &--dek {
       grid-column: 2;
@@ -36,8 +36,7 @@
       grid-row-start: 1;
       grid-row-end: 3;
       width: 310px;
-      height: 206px;
-      background-color: blueviolet;
+      height: 285px;
     }
     &:nth-child(even) &--hed,
     &:nth-child(even) &--dek {

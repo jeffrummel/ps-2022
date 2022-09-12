@@ -16,13 +16,13 @@
     </article>
 
   </main>
-  {% if supplemental === true %}
+  {% if supplemental === fileName %}
     {% include './partials/_supp.njk'%}
   {% endif%}
 
-  {% if kickers.kickers.page === title | slug %}
+  {# {% if kickers.kickers.page === fileName %}
     {% include './partials/_kickers.njk' %}
-  {% endif %}
+  {% endif %} #}
 
   {% if 'rapid-response-websites' === title | slug %}
     {% include './partials/_features.njk' %}

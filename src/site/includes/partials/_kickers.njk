@@ -1,7 +1,11 @@
   <section class="kickers">
   {% for kicker in kickers.kickers %}
     <div class="kickers__item">
-      <figure class="kickers__item--grfx"></figure>
+      {% if kicker.grfx %}
+      <svg version="1.1" class="kickers__item--grfx" id="{{kicker.grfx}}" x="0px" y="0px" viewBox="0 0 256 217">
+        {% include '../icons/' +  kicker.grfx + '.svg.njk'%}
+      </svg>
+      {% endif %}
       <h3 class="kickers__item--hed">{{ kicker.hed }}</h3>
       <p class="kickers__item--dek">{{ kicker.dek }}</p>
     </div>
