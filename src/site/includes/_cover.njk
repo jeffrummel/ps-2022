@@ -12,22 +12,31 @@
       <img class="marq__grfx--img" src="/img/DSC_0112.jpg" alt="Our hero, out of focus.">
     </figure> #}
   </header>
-  </main>
-  {# {% if supp.supps.rel === page.fileName %} #}
-    {# {% include './partials/_supp.njk'%} #}
-  {# {% endif%} #}
-  {% if supplemental %}
-    {% set suppId = page.fileName %}
 
-    {% include './partials/_supp.njk'%}
-  {% endif%}
+    {% set suppId = page.fileName %}
+    {{ suppId }}
+
+
+  </main>
+  {% for supp in supp %}
+  <div class="supp">
+    <figure class="supp__grfx">
+      <img class="supp__grfx--img" src="{{ supp.grfx }}">
+    </figure>
+    <aside  class="supp__post">
+      <h2 class="supp__post--hed">{{ supp.title }}</h2>
+      <div class="supp__post--body">
+        <p>{{ supp.dek | mdRender | safe }}</p>
+      </div>
+    </aside>
+  </div>
+  {% endfor %}
 
   {% if kickers.kickers.page === page.fileName %}
     {% include './partials/_kickers.njk' %}
   {% endif %}
 
   {% include './partials/_features.njk' %}
-
 
   {% include './partials/_form.njk' %}
 
