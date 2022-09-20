@@ -9,14 +9,20 @@
   justify-content: flex-end;
   background-position: center;
   background-attachment: fixed;
-  background-size: 120% auto;
   background-blend-mode: multiply;
-  // animation: marq 8.3s cubic-bezier(0.075, 0.82, 0.165, 1) 0s 1 forwards;
   color: #fff;
   scroll-snap-align: start;
+  animation: marq 8.3s cubic-bezier(0.075, 0.82, 0.165, 1) 0s 1 forwards;
+  @media screen and (max-aspect-ratio: 8/6) {
+    background-size: auto 120%;
+  }
+  @media screen and (min-aspect-ratio: 8/6) {
+    background-size: 120% auto;
+  }
   #index & {
     background-image: url(/img/DSC_0112.jpg);
     background-color: rgba(#3D2A24, 1);
+    background-repeat: no-repeat;
   }
   #rapid-response-websites & {
     background-image: url(/img/rapid-response-websites.webp);
