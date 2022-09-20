@@ -36,8 +36,9 @@
     {% include './partials/_kickers.njk' %}
   {% endif %}
 
-  {% include './partials/_features.njk' %}
-
+  {% if 'rapid-response-websites' === title | slug %}
+    {% include './partials/_features.njk' %}
+  {% endif %}
   {% include './partials/_form.njk' %}
 
   <footer class="cov__foot foot">
